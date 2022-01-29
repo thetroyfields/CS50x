@@ -1,0 +1,19 @@
+open CSV file and DNA sequence & read contents into memory
+    first column has name, then STRs for each of the remaining columns
+
+    *reader and dictReader
+    *sys.argv for command-line arguments
+    *open text file using open(file) -> read its contens using f.read()
+
+for each STR, compute longest consecutive repeats in the sequence
+    for each position in the sequence: compute how many times the STR repeats starting at that position
+    for each position, keep checking successive substrings until the STR repeats no longer
+    update longest sequence
+
+    *len(s)
+    *s[i:j] takes the string s, and returns the substring with all characters from the i'th character up to
+     but not including the j'th
+
+compare the STR counts against each row in CSV file
+    save STR counts in some data structure
+    for each row, check if each STR count matches. print out person's name
