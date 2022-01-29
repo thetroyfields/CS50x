@@ -1,0 +1,39 @@
+pk_c00097a8d3574f39acd1b9e0cf3582ce
+
+Store enough information so that you know who bought what at what price and when
+
+account = db.execute("SELECT id FROM users WHERE id = ?", session["user_id"])
+
+    stocks = ("SELECT symbol, quantity FROM transactions WHERE id = ?", session["user_id"])
+    user_cash = ("SELECT cash FROM users WHERE id = ?", session["user_id"])
+    
+    for stock in stocks:
+        price = lookup(["symbol"])
+        cash = user_cash[0]["cash"]
+        value = stock["quantity"] * price
+        assets_value = value + cash
+        
+
+    return render_template("index.html", symbol=stocks["symbol"], quantity=stocks["quantity"], price=price, value=value, cash=cash, assets_value=assets_value)
+    
+    
+            stock_info = lookup([stocks]["symbol"])
+        price = stock_info["price"]
+        value = stock_info["quantity"] * price
+        assets_value += value
+        
+portfolio table:
+stock symbol
+quantity
+current price
+user_id
+
+
+transactions table:
+transaction_id
+user_id
+symbol
+price
+quantity
+time
+type (buy or sell)

@@ -1,0 +1,44 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="add_cash" placeholder="Amount" type="number" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Cash</button>
+    </form>    
+    <br>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Current Price</th>
+                <th>Value</th>
+            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.quantity }}</td>
+                    <td>{{ stock.price | usd }}</td>
+                    <td>{{ stock.value | usd }}</td>
+                </tr>
+            {% endfor %}
+            </tr>
+        </table>    
+        <table class="table">
+            <tr>
+                <th>Cash</th>
+                <th> Value of all assets</th>
+            </tr>
+            <tr>
+                <td>{{ cash | usd }}</td>
+                <td>{{ assets_value | usd }}</td>
+            </tr>
+        </table>    
+    </div>    
+{% endblock %}

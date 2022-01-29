@@ -1,0 +1,116 @@
+.container {
+    width: 50%;
+    text-align: center;
+    
+}
+
+
+.jumbotron {
+    background-color: #B07FD6;
+    color: Black;
+    margin-bottom: 1rem;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.section {
+    padding: 0rem 3rem 2rem 3rem;
+}
+
+.section2 {
+    padding-top: 9rem
+}    
+
+body {
+    background-color: #6863FF;
+}
+
+h3 {
+    text-align: center;
+    font: arial;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+li {
+    font-size: 20px;
+}
+
+ol {
+    width: 40%;
+    display: inline-block;
+}
+
+iframe {
+    display: block;
+    width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.dropdown-button {
+    background-color: #86B3DA;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: 5px;
+    border-color: black;
+    cursor: pointer;
+    
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px (0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {background-color: #6863FF;}
+
+.dropdown:hover .dropdown-menu {display: block;}
+
+.dropdown:hover .dropdown-button {background-color: #6863FF;}
+
+
+.cs50pbar {
+    margin-top: 8rem;
+    text-align: center;
+}    
+
+blockquote {
+    text-align: left;
+}
+
+img {
+    height:375px;
+    width:250px;
+}
+
+.button1 {
+    background-color: #86B3DA;
+    color: white;
+    padding: 13px;
+    font-size: 20px;
+    border: 5px;
+    border-color: black;
+    cursor: pointer;
+}
